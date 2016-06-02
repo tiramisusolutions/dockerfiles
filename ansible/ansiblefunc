@@ -1,0 +1,2 @@
+#!/bin/bash
+# Some functions as a wrapper around ansible in docker
