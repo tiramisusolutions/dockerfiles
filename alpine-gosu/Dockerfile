@@ -23,3 +23,6 @@ RUN apk --no-cache add bash \
     && rm -rf /root/.gnupg \
     && rm -rf /var/cache/apk/* \
     ;
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
