@@ -7,27 +7,5 @@ green=`tput setaf 2`
 reset=`tput sgr0`
 yellow=`tput setaf 3`
 
-ansible (){
-    if [[ $@ ]]; then
-	: #Do nothing
-    else
-	clear
-	echo "${red}Missing argument${reset}"
-	echo "Use""${green} ansible"${reset}"${yellow} -playbook and so on${reset}"
-	kill -INT $$;
-    fi
-
-    docker run --privileged=true -it --rm \
-	-- name ansible-base "$1"
-}
-
-_ansible(){
-    local cur prev opts
-    cur="${COMP_WORDS[COMP_CWORD]}"
-    prev="${COMP_WORDS[COMP_CWORD-1]}"
-    opts="ansible ansible-playbook"
-
-    COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
-}
-
-complete -F _ansible ansible
+# Here the aliases
+alias ansible-playbook='docker run --privileged=true -it --rm --name ansible-docker quay.io/tiramisu/mr.ansible ansible-playbook'
