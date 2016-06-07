@@ -1,4 +1,4 @@
-FROM alpine:3.3
+FROM alpine:3.4
 MAINTAINER Sven Strack <sven@so36.net>
 
 ENV GOSU_VERSION="1.9" \
@@ -17,8 +17,8 @@ RUN apk --no-cache add bash \
     && curl -sSL "$GOSU_DOWNLOAD_SIG" > gosu-amd64.asc \
     && gpg --verify gosu-amd64.asc \
     && rm -f gosu-amd64.asc \
-    && mv gosu-amd64 /usr/bin/gosu \
-    && chmod +x /usr/bin/gosu \
+    && mv gosu-amd64 /usr/local/bin/gosu \
+    && chmod +x /usr/local/bin/gosu \
     && apk del --purge $buildDeps \
     && rm -rf /root/.gnupg \
     && rm -rf /var/cache/apk/* \

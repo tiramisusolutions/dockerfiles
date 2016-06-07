@@ -9,7 +9,7 @@
 # pull base image
 FROM alpine:3.4
 
-ENV APP_DIR /opt/mr.butler/ansible
+ENV APP_DIR /opt/ansible
 ENV PIP_CACHE /root/.cache
 
 MAINTAINER Sven Strack <sven@so36.net>
@@ -18,19 +18,17 @@ MAINTAINER Sven Strack <sven@so36.net>
 RUN apk --no-cache add python py-pip openssl ca-certificates bash && \
     apk --no-cache add --virtual build-dependencies \
         python-dev libffi-dev openssl-dev build-base curl && \
-    pip install -U pip cffi && \
-    pip install ansible && \
-    #virtualenv $APP_DIR && cd $APP_DIR && \
-    #./bin/pip install -U pip cffi && \
-    #./bin/pip install ansible && \
+#    curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python && \
+#    echo "export PATH=/root/.local/bin:$PATH" .bashrc && source .bashrc && \
+#    pipsi upgrade pip cffi && \
+#    pipsi install ansible && \
+    pip install --user --upgrade pip cffi && \
+    pip install --user ansible && \
     rm -rf $PIP_CACHE && \
     apk del build-dependencies
-
-WORKDIR $APP_DIR
 
 VOLUME ["/$APP_DIR/"]
 
 # default command: display Ansible version
-CMD ["ansible-playbook", "--version" ]
-#CMD [ "./opt/ansible/bin/ansible-playbook", "--version" ]
+CMD [ "./root/.local/bin/ansible-playbook", "--version" ]
 #CMD ["/bin/bash"]
