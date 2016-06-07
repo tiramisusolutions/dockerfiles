@@ -1,4 +1,4 @@
-# Dockerfile for building Ansible image for Alpine 3, with as few additional software as possible.
+# Dockerfile for building Ansible image for Alpine 3.4, with as few additional software as possible.
 #
 # @see https://github.com/gliderlabs/docker-alpine/blob/master/docs/usage.md
 #
@@ -20,18 +20,9 @@ RUN apk --no-cache add python py-pip openssl ca-certificates bash && \
         python-dev libffi-dev openssl-dev build-base curl && \
     pip install -U pip cffi && \
     pip install ansible && \
-    #virtualenv $APP_DIR && cd $APP_DIR && \
-    #./bin/pip install -U pip cffi && \
-    #./bin/pip install ansible && \
     rm -rf $PIP_CACHE && \
     apk del build-dependencies
 
 WORKDIR $APP_DIR
 
 VOLUME ["/$APP_DIR/"]
-
-# default command: display Ansible version
-#CMD ["ansible-playbook", "--version" ]
-#CMD [ "./opt/ansible/bin/ansible-playbook", "--version" ]
-#CMD ["/bin/bash"]
-#ENTRYPOINT [/bin/bash]
