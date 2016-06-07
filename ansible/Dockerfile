@@ -1,4 +1,4 @@
-# Dockerfile for building Ansible image for Alpine 3, with as few additional software as possible.
+# Dockerfile for building Ansible image for Alpine 3.4, with as few additional software as possible.
 #
 # @see https://github.com/gliderlabs/docker-alpine/blob/master/docs/usage.md
 #
@@ -7,30 +7,22 @@
 
 
 # pull base image
-FROM alpine:3.3
+FROM alpine:3.4
+
+ENV APP_DIR /opt/mr.butler/ansible
+ENV PIP_CACHE /root/.cache
 
 MAINTAINER Sven Strack <sven@so36.net>
 
 
-RUN apk --update add python py-pip openssl ca-certificates    && \
-    apk --update add --virtual build-dependencies \
-                python-dev libffi-dev openssl-dev build-base  && \
-    pip install --upgrade pip cffi                            && \
-    \
-    \
-    echo "===> Installing Ansible..."  && \
-    pip install ansible                && \
-    \
-    \
-    echo "===> Removing package list..."  && \
-    apk del build-dependencies            && \
-    rm -rf /var/cache/apk/*               && \
-    \
-    \
-    echo "===> Adding hosts for convenience..."  && \
-    mkdir -p /etc/ansible                        && \
-    echo 'localhost' > /etc/ansible/hosts
+RUN apk --no-cache add python py-pip openssl ca-certificates bash && \
+    apk --no-cache add --virtual build-dependencies \
+        python-dev libffi-dev openssl-dev build-base curl && \
+    pip install -U pip cffi && \
+    pip install ansible && \
+    rm -rf $PIP_CACHE && \
+    apk del build-dependencies
 
+WORKDIR $APP_DIR
 
-# default command: display Ansible version
-CMD [ "ansible-playbook", "--version" ]
+VOLUME ["/$APP_DIR/"]
