@@ -31,6 +31,7 @@ WORKDIR $APP_DIR
 VOLUME ["/$APP_DIR/"]
 
 # default command: display Ansible version
-CMD ["ansible-playbook", "--version" ]
+#CMD ["ansible-playbook", "--version" ]
 #CMD [ "./opt/ansible/bin/ansible-playbook", "--version" ]
 #CMD ["/bin/bash"]
+#ENTRYPOINT [/bin/bash]
