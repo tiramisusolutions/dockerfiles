@@ -17,7 +17,7 @@ MAINTAINER Sven Strack <sven@so36.net>
 
 RUN apk --no-cache add python py-pip openssl ca-certificates bash && \
     apk --no-cache add --virtual build-dependencies \
-        python-dev libffi-dev openssl-dev build-base curl && \
+        python-dev libffi-dev openssl-dev build-base && \
     pip install -U pip cffi && \
     pip install ansible && \
     rm -rf $PIP_CACHE && \
