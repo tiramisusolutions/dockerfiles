@@ -28,4 +28,4 @@ COPY check.sh /build/check.sh
 
 WORKDIR /build
 
-#ENTRYPOINT ["make"]
+CMD ["/build/check.sh"]
