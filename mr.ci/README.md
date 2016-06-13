@@ -5,4 +5,3 @@ docker run -it --rm -v ${PWD}/:/build/app:rw -v ${PWD}/docs:/build/docs -u $(id 
 
 Loop through dir and check all files:
 
-for f in *.rst ; do alex $f -t ; done
