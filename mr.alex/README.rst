@@ -24,4 +24,11 @@ It starts a container, mounts your [current dir]/docs directory into the contain
 
 for f in *.rst ; do alex $f -t ; done
 
+Remember:
+
+since alex are only does rst we need to do:
+
+- save html of file we build with sphinx, converd it to md with pandoc and run alex against it
+- create custom .alexrc with 'allowd words'
+
 
