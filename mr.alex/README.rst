@@ -21,3 +21,7 @@ What it does
 It starts a container, mounts your [current dir]/docs directory into the container to /build and runs alex against it.
 
 ..todo:: pic, more/better docs, add configs like allowed words to docs
+
+for f in *.rst ; do alex $f -t ; done
+
+
