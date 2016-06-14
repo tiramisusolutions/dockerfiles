@@ -1,0 +1,655 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9"   lang="en"   > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"  lang="en"  > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Developing for Plone &mdash; Plone Documentation v5.0</title>
+  
+
+  
+  
+    <link rel="icon" href="../_static/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" type="image/x-icon" href="../_static/img/favicon.ico" />
+    <link type="image/x-icon" href="../_static/img/favicon.ico" />
+  
+
+  <script type="text/javascript" src="../_static/jquery.js"></script>
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="Search within Plone Documentation v5.0" href="../_static/opensearch.xml"/>
+   
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/osexample.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/css/plone-fonts.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/css/font-awesome.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/css/bootstrap.min.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  
+
+  <link rel="stylesheet" href="../_static/css/ploneorg5.css" type="text/css" />
+    <link rel="top" title="Plone Documentation v5.0" href="../index.html"/>
+        <link rel="next" title="Develop Plone Add ons" href="addons/index.html"/>
+        <link rel="prev" title="Multiple Plone Servers" href="../external/ansible-playbook/docs/multiserver.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+</head>
+
+<body role="document">
+
+
+
+<div id="topbar" class="navbar navbar-inverse navbar-static-top">
+  <div class="container" id="topbarcontainer">
+
+  </div>
+</div>
+
+
+
+<header role="banner" id="banner">
+  <div class="container">
+
+    <div class="col-xs-12 col-sm-3">
+      <a href="../" accesskey="1" title="Website" id="portal-logo">
+        <img class="logo" src="../_static/img/plone-invers.svg" alt="Plone" ><span>Documentation</span>
+      </a>
+    </div>
+
+  
+    <div class="col-xs-12 col-sm-3 col-sm-offset-6">
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <label for="q">search</label>
+    <input type="text" name="q" id="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+    </div>
+    <div class="clearfix visible-xs"></div>
+    
+  </div>
+</header>
+
+
+
+<div class="breadcrumbs-container" id="breadcrumbs-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-9">
+        <div role="navigation" aria-label="breadcrumbs navigation">
+          <ul class="breadcrumb">
+            
+            <li class="master">
+              
+                <span class="version_switcher">
+                  <label for="versionpicker-top">Version</label>
+                  <select id="versionpicker-top">
+                  
+                    <option value="5" selected="selected" >5</option>
+                  
+                    <option value="4" >4</option>
+                  
+                    <option value="3" >3</option>
+                  
+                  </select>
+                </span>
+              
+              
+                <span class="lang_switcher">
+                  <label for="languagepicker-top">Language</label>
+                  <select id="languagepicker-top">
+                  
+                    <option value="en" selected="selected" >English</option>
+                  
+                  </select>
+                </span>
+              
+              <a href="../index.html">Documentation</a>
+            </li>
+            
+            <li class="breadcrumb-item">Developing for Plone</li>
+            <!--
+            <li class="breadcrumb-source">
+              
+            </li>
+            -->
+          </ul>
+        </div>
+      </div>
+
+      
+      <div class="rst-buttons col-xs-3" role="navigation" >
+        <div role="navigation" aria-label="breadcrumbs navigation">
+          <ul class="breadcrumb">
+          
+            <li><a href="../external/ansible-playbook/docs/multiserver.html" title="Multiple Plone Servers"><span class="fa fa-arrow-circle-left"></span> Previous</a></li>
+          
+          
+            <li><a href="addons/index.html" title="Develop Plone Add ons">Next <span class="fa fa-arrow-circle-right"></span></a></li>
+          
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="master">
+  <div class="container">
+    
+<div class="row">
+  <div class="col-sm-12 admonition warning version_warning" >
+    <p class="first admonition-title">Warning</p>
+   <p class="last">This is the documentation for the just-released Plone 5, and is updated regularly.<br />
+    There have been many changes in this version, so if you are using Plone 4 do consult the <a href="http://docs.plone.org/4/en">Plone 4.3 Documentation</a></p>
+  </div>
+</div>
+
+    <div class="row">
+    <aside class="col-sm-4 col-lg-3 hidden-xs">
+      <div class="aside-toggle"></div>
+      <div class="sidebarwrapper">
+        
+        <nav data-toggle="nav-shift" class="nav-side">
+          <div role="navigation" aria-label="navigation">
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Introduction</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart/index.html">Quickstart</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../working-with-content/index.html">Working with Content</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../adapt-and-extend/index.html">Adapting &amp; Extending Plone</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../manage/index.html">Installing, Managing and Updating Plone</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Developing for Plone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="addons/index.html">Developing add-ons for Plone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone/index.html">Programming with Plone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging/index.html">Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing/index.html">Writing tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coredev/docs/index.html">The process for developing for Plone core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="styleguide/index.html">Plone style guides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import/index.html">Importing content from other sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tutorials">Tutorials</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#selected-plone-core-package-documentation">Selected Plone core package documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#plone-api">plone.api</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="plone.api/docs/index.html">full plone.api documentaton</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#plone-app-multilingual">plone.app.multilingual</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../external/plone.app.multilingual/README.html">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../external/plone.app.multilingual/README.html#versions">Versions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../external/plone.app.multilingual/README.html#components">Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../external/plone.app.multilingual/README.html#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../external/plone.app.multilingual/README.html#setup">Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../external/plone.app.multilingual/README.html#features">Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../external/plone.app.multilingual/README.html#marking-objects-as-translatables">Marking objects as translatables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../external/plone.app.multilingual/README.html#marking-fields-as-language-independant">Marking fields as language independant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../external/plone.app.multilingual/README.html#internal-design-of-plone-app-multilingual">Internal design of plone.app.multilingual</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../external/plone.app.multilingual/README.html#source-code">Source Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../external/plone.app.multilingual/README.html#license">License</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../external/plone.app.multilingual/README.html#roadmap">Roadmap</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#plone-app-contenttypes">plone.app.contenttypes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../external/plone.app.contenttypes/docs/README.html">plone.app.contenttypes documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#plone-app-contentlisting">plone.app.contentlisting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../external/plone.app.contentlisting/README.html">Listing and working with Plone content objects using plone.app.contentlisting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#plone-app-event">plone.app.event</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../external/plone.app.event/docs/index.html">plone.app.event documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../appendices/index.html">Appendices</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">About this documentation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License for Plone Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../askforhelp.html">Asking for help</a></li>
+</ul>
+
+            
+          </div>
+        </nav>
+      </div>
+    </aside>
+    <div class="col-xs-12 col-sm-8 col-lg-9 content-column">
+      <div class="row visible-xs">
+        <div class="col-xs-12" >
+          
+          <nav class="nav-top" role="navigation" aria-label="top navigation">
+            <i data-toggle="nav-top" class="fa fa-bars"></i>
+            <a href="../../sitemap.html">Table Of Content</a>
+          </nav>
+        </div>
+      </div>
+      <div class="row">
+        <section role="main" class="col-xs-12">
+          
+  <div class="section" id="developing-for-plone">
+<h1>Developing for Plone<a class="headerlink" href="#developing-for-plone" title="Permalink to this headline">¶</a></h1>
+<p>An overview of all documentation for developers, both for writing your own add-ons and for working with Plone itself.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="addons/index.html">Developing add-ons for Plone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="addons/index.html#create-a-package">Create a package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons/index.html#develop-with-dexterity">Develop with Dexterity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons/index.html#upgrading-to-plone-5-0">Upgrading to Plone 5.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons/index.html#add-your-package-to-buildout">Add your package to buildout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons/index.html#the-plone-collective">The Plone Collective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons/index.html#releasing-your-package">Releasing your package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons/index.html#working-with-javascript">Working with Javascript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons/index.html#background">Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons/index.html#training">Training</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="plone/index.html">Programming with Plone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plone/getstarted/index.html">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone/serving/index.html">HTTP serving and traversing site data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone/views/index.html">Views, viewlets and layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone/content/index.html">Content management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone/forms/index.html">Models, forms, fields and widgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone/persistency/index.html">ZODB, persistency and transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone/functionality/index.html">Functionality and features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone/searching_and_indexing/index.html">Queries, search and indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone/i18n/index.html">Internationalization (i18n)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone/members/index.html">Users and members</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone/security/index.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone/sessions/index.html">Sessions and cookies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone/images/index.html">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone/syndication.html">Syndication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone/misc/index.html">Miscellaneous information</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="debugging/index.html">Debugging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="debugging/logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging/pdb.html">Python debugging</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="testing/index.html">Writing tests</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="testing/unit_testing.html">Unit testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing/functional_testing.html">Functional testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing/doctests.html">Doctests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing/cookbook.html">Testing Cookbook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing/index.html#plone-app-testing-documentation">plone.app.testing documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing/index.html#plone-testing-documentation">plone.testing documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing/index.html#plone-app-robotframework-documentation">plone.app.robotframework documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Developing for Plone Core follows similar patterns, but it requires you to sign the Plone Contributor license.
+The process is documented here.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="coredev/docs/index.html">The process for developing for Plone core</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="coredev/docs/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coredev/docs/index.html#contents">Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coredev/docs/index.html#additional-material">Additional Material</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Writing proper code and documentation that others can expand upon is vital.
+As Plone community, we stick to the following style guides, and ask that all developers and documentation writers do the same.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="styleguide/index.html">Plone style guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="styleguide/python.html">Python styleguide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="styleguide/javascript.html">JavaScript styleguide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="styleguide/documentation.html">Styleguide for documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="styleguide/naming.html">Naming conventions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="styleguide/deprecation.html">Plone Deprecation Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="styleguide/editor.html">How to set up your editor</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Importing content from other systems often requires the help of tools to get content out from various sources and into Plone. A number of these tools exist.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="import/index.html">Importing content from other sources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="import/index.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import/index.html#transmogrify">Transmogrify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import/index.html#collective-transmogrifier">collective.transmogrifier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import/index.html#transmogrify-helpers">Transmogrify helpers</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="tutorials">
+<h2>Tutorials<a class="headerlink" href="#tutorials" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://training.plone.org/5">“Mastering Plone”-training</a></p>
+<p>Mastering Plone is intended as a week-long training for people who are new to Plone or want to learn about the current best-practices of Plone-development.</p>
+<p>It is in active use by various trainers in the Plone world, and is being developed as a 'collaborative syllabus'.</p>
+<p>And while attending one of the trainings with real trainers is the best thing to do, you can learn a great deal from following the documentation for these trainings.</p>
+<p><a class="reference external" href="https://mockup-training.readthedocs.org/en/latest/index.html">&quot;Mastering Mockup&quot;-training</a></p>
+<p>This training was created to teach about Mockup, the new Frontend library for Plone 5 .</p>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+</div>
+<div class="section" id="selected-plone-core-package-documentation">
+<h2>Selected Plone core package documentation<a class="headerlink" href="#selected-plone-core-package-documentation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="plone-api">
+<h3>plone.api<a class="headerlink" href="#plone-api" title="Permalink to this headline">¶</a></h3>
+<p>plone.api is the recommended way of accessing Plone's functionality in your own code.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="plone.api/docs/index.html">full plone.api documentaton</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plone.api/docs/index.html#narrative-documentation">Narrative documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone.api/docs/index.html#complete-api-and-advanced-usage">Complete API and advanced usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone.api/docs/index.html#contribute">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone.api/docs/index.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="plone-app-multilingual">
+<h3>plone.app.multilingual<a class="headerlink" href="#plone-app-multilingual" title="Permalink to this headline">¶</a></h3>
+<p>The default solution to create multilingual content.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../external/plone.app.multilingual/README.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../external/plone.app.multilingual/README.html#versions">Versions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../external/plone.app.multilingual/README.html#components">Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../external/plone.app.multilingual/README.html#usage">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../external/plone.app.multilingual/README.html#setup">Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../external/plone.app.multilingual/README.html#features">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../external/plone.app.multilingual/README.html#marking-objects-as-translatables">Marking objects as translatables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../external/plone.app.multilingual/README.html#marking-fields-as-language-independant">Marking fields as language independant</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../external/plone.app.multilingual/README.html#internal-design-of-plone-app-multilingual">Internal design of plone.app.multilingual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../external/plone.app.multilingual/README.html#source-code">Source Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../external/plone.app.multilingual/README.html#license">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../external/plone.app.multilingual/README.html#roadmap">Roadmap</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="plone-app-contenttypes">
+<h3>plone.app.contenttypes<a class="headerlink" href="#plone-app-contenttypes" title="Permalink to this headline">¶</a></h3>
+<p>The default dexterity-based content types, since Plone 5.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../external/plone.app.contenttypes/docs/README.html">plone.app.contenttypes documentation</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="plone-app-contentlisting">
+<h3>plone.app.contentlisting<a class="headerlink" href="#plone-app-contentlisting" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../external/plone.app.contentlisting/README.html">Listing and working with Plone content objects using plone.app.contentlisting</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="plone-app-event">
+<h3>plone.app.event<a class="headerlink" href="#plone-app-event" title="Permalink to this headline">¶</a></h3>
+<p>The calendar framework for Plone, default since Plone 5.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../external/plone.app.event/docs/index.html">plone.app.event documentation</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+        </section>
+      </div>
+    </div>
+    </div>
+  </div>
+  
+
+</div>
+
+
+<div class="breadcrumbs-container" id="breadcrumbs-bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-9">
+        <div role="navigation" aria-label="breadcrumbs navigation">
+          <ul class="breadcrumb">
+            
+            <li class="master">
+              
+                <span class="version_switcher">
+                  <label for="versionpicker-bottom">Version</label>
+                  <select id="versionpicker-bottom">
+                  
+                    <option value="5" selected="selected" >5</option>
+                  
+                    <option value="4" >4</option>
+                  
+                    <option value="3" >3</option>
+                  
+                  </select>
+                </span>
+              
+              
+                <span class="lang_switcher">
+                  <label for="languagepicker-bottom">Language</label>
+                  <select id="languagepicker-bottom">
+                  
+                    <option value="en" selected="selected" >English</option>
+                  
+                  </select>
+                </span>
+              
+              <a href="../index.html">Documentation</a>
+            </li>
+            
+            <li class="breadcrumb-item">Developing for Plone</li>
+            <!--
+            <li class="breadcrumb-source">
+              
+            </li>
+            -->
+          </ul>
+        </div>
+      </div>
+
+      
+      <div class="rst-buttons col-xs-3" role="navigation" >
+        <div role="navigation" aria-label="breadcrumbs navigation">
+          <ul class="breadcrumb">
+          
+            <li><a href="../external/ansible-playbook/docs/multiserver.html" title="Multiple Plone Servers"><span class="fa fa-arrow-circle-left"></span> Previous</a></li>
+          
+          
+            <li><a href="addons/index.html" title="Develop Plone Add ons">Next <span class="fa fa-arrow-circle-right"></span></a></li>
+          
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<footer id="doormat">
+  <div class="container">
+      
+    <nav class="row">
+      <div class="col-xs-6 col-sm-3">
+      Further help resources:
+        <ul class="list-unstyled">
+        	<li><a href="http://community.plone.org">Community discussion</a></li>
+          <li><a href="http://stackoverflow.com/questions/tagged/plone">Stackoverflow</a></li>
+          <li><a href="https://plone.org/support/chat">IRC Chat</a></li>
+        </ul>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+      More info on the Plone project:
+        <ul class="list-unstyled">
+          <li><a href="https://plone.org/foundation">Plone Foundation</a></li>
+	  <li><a href="https://plone.com/success-stories">Success Stories</a></li>
+          <li><a href="https://plone.com/providers">Providers &amp; Consultants</a></li>
+        </ul>
+      </div>
+      <div class="clearfix visible-xs"></div>
+      <div class="col-xs-6 col-sm-3">
+      About this documentation:
+        <ul class="list-unstyled">
+          <li><a href="http://docs.plone.org/about/contributing.html#id6">Contribute</a></li>
+          <li><a href="https://github.com/plone/documentation">These docs on Github</a></li>
+        </ul>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+      Download:
+        <ul class="list-unstyled">
+          <li><a href="https://plone.org/products/plone">Plone</a></li>
+          <li><a href="https://plone.org/products">Plone add-ons</a></li>
+        </ul>
+      </div>
+
+    </nav>
+
+  </div>
+</footer>
+
+
+
+<footer id="colophon">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-3">
+        <img class="theme_trademark-logo"
+             src="../_static/img/plone-invers.svg"
+             alt="Plone" >
+      </div>
+
+      <div class="col-xs-12 col-sm-9 colophon">
+        <p>The text and illustrations in this website are licensed by the Plone Foundation under a Creative Commons Attribution 4.0 International license.
+        Plone and the Plone<sup>®</sup> logo are registered trademarks of the Plone Foundation, registered in the United States and other countries.
+        For guidelines on the permitted uses of the Plone trademarks, see https://plone.org/foundation/logo
+        All other trademarks are owned by their respective owners.</p>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+  <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+          URL_ROOT: '../',
+          VERSION: '5.0',
+          VERSIONS: ['5', '4', '3'],
+          LANGUAGE: 'en',
+          LANGUAGES: ['en'],
+          USE_VERSION_SWITCHER: true,
+          USE_LANGUAGE_SWITCHER: true,
+          COLLAPSE_INDEX: false,
+          FILE_SUFFIX: '.html',
+          HAS_SOURCE: false
+      };
+  </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/osexample.js"></script>
+    <script type="text/javascript" src="../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/js/version_switch.js"></script>
+
+<div class="footer ga-footer">This page uses <a href="http://analytics.google.com/"> Google Analytics</a> to collect statistics. You can disable it by blocking the JavaScript coming from www.google-analytics.com.
+  <script type="text/javascript" >
+  (function(i,s,o,g,r,a,m){
+    i['GoogleAnalyticsObject']=r;
+    i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)
+    },i[r].l=1*new Date();
+    a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];
+    a.async=1;
+    a.src=g;
+    m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-1907133-6', 'plone.org');
+  ga('send', 'pageview');
+  </script>
+</div>
+
+<!-- Below block includes our freshdesk widget -->
+<script type="text/javascript" src="https://s3.amazonaws.com/assets.freshdesk.com/widget/freshwidget.js"></script>
+<script type="text/javascript">
+    FreshWidget.init("", {"queryString": "&widgetType=popup&formTitle=Feedback&captcha=yes&searchArea=no", "utf8": "✓", "widgetType": "popup", "buttonType": "text", "buttonText": "Feedback", "buttonColor": "white", "buttonBg": "#006063", "alignment": "4", "offset": "235px", "formHeight": "500px", "captcha": "yes", "url": "https://plone.freshdesk.com"} );
+</script>
+
+
+
+</body>
+</html>
