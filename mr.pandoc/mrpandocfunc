@@ -2,5 +2,5 @@
 # Bash wrappers for docker run commands
 
 mr.pandoc(){
-    docker run -v `pwd`/:/source p2 "$@"
+    docker run -v `pwd`/:/source mr.pandoc "$@"
 }

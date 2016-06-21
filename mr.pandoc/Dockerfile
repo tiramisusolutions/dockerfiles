@@ -8,4 +8,4 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /source
 ENTRYPOINT ["pandoc"]
-CMD ["--help"]
+#CMD ["--help"]
