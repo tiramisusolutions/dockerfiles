@@ -1,0 +1,7 @@
+#!/bin/bash
+# Bash wrappers for docker run commands
+
+mr.alex(){
+    docker run -it --rm -v $(PWD)/examples:/build - mr.alex "$@"
+    #docker run --rm -it -v ${PWD}/hosts:/etc/ansible/hosts -v ${PWD}/ansible.cfg:/etc/ansible/ansible.cfg -v ~/.ssh:/root/.ssh:ro ac "$@"
+}
