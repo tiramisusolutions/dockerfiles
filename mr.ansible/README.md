@@ -16,3 +16,6 @@ Future:
 Rename container to mr.ansible, because this should give us:
 
 docker run --rm -it -v ${PWD}/hosts:/etc/ansible/hosts -v ${PWD}/ansible.cfg:/etc/ansible/ansible.cfg -v ~/.ssh:/root/.ssh:ro mr.ansible all -m ping
+
+
+
