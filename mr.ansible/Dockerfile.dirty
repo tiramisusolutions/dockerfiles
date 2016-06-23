@@ -37,4 +37,7 @@ RUN mkdir root/.ssh
 RUN touch root/.ssh/known_hosts
 RUN chmod -R 700 /root/.ssh
 
-#ENTRYPOINT [ "ansible" ]
+COPY entrypoint.sh /usr/local/bin/
+
+ENTRYPOINT [ "/usr/local/bin/entrypoint.sh" ]
+
