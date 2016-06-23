@@ -1,0 +1,11 @@
+---
+# This role installs all needed packages for a Ploneserver
+
+- name: Install base packages
+  become: yes
+  become_method: sudo 
+  tags:
+    - base-packages
+  apt: name={{item}} state=present
+  with_items:
+    - htop

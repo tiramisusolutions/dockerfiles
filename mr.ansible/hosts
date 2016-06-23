@@ -1,2 +1,2 @@
 [test]
-192.168.21.10 ansible_user=vagrant
+testbox.io ansible_user=vagrant

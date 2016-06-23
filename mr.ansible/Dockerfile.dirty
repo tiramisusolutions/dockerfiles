@@ -33,5 +33,8 @@ RUN builddeps=' \
 		six \
 	&& apk del --purge $builddeps
 
+RUN mkdir root/.ssh
+RUN touch root/.ssh/known_hosts
+RUN chmod -R 700 /root/.ssh
 
-ENTRYPOINT [ "ansible" ]
+#ENTRYPOINT [ "ansible" ]
