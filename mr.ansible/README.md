@@ -22,3 +22,6 @@ docker run --rm -it -v ${PWD}/hosts:/etc/ansible/hosts -v ${PWD}/ansible.cfg:/et
 docker run --rm -it --add-host="testbox.io:192.168.21.10" -v $SSH_AUTH_SOCK:/tmp/ssh.sck -e SSH_AUTH_SOCK=/tmp/ssh.sck -v ${PWD}/hosts:/etc/ansible/hosts -v ${PWD}/ansible.cfg:/etc/ansible/ansible.cfg -v ${PWD}/roles:/etc/ansible/roles -v ${PWD}/plays:/etc/ansible/plays a2 ansible-playbook /etc/ansible/plays/testbox.yml
 
 in order ro make this work, check the dirty dockerfile
+
+# test.sh
+bash -x test.sh testbox.yml
