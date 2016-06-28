@@ -3,7 +3,7 @@
 Running [Ansible](https://www.ansible.com/) in a [Alpine](http://www.alpinelinux.org/) based [Docker](https://www.docker.com/) Container.
 
 
-![mr.ansible](docs/static/ansiblefunc.png "Shows example or mr.ansible in action")
+![mr.ansible](docs/_static/ansiblefunc.png "Shows example or mr.ansible in action")
 
 Example:
 
