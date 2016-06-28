@@ -27,6 +27,9 @@ RUN builddeps=' \
 	py-jinja2 \
 	py-httplib2 \
 	$builddeps \
+	&& mkdir root/.ssh \
+	&& touch root/.ssh/known_hosts \
+	&& chmod -R 700 /root/.ssh \
 	&& pip install --upgrade pip \
 	&& pip install \
 		ansible \
@@ -35,3 +38,5 @@ RUN builddeps=' \
 
 
 ENTRYPOINT [ "ansible" ]
+
+
