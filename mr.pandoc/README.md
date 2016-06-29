@@ -1,6 +1,13 @@
-# Mr.pandoc
+# mr.pandoc
+
+[Pandoc](http://pandoc.org/) in a [Docker](https://www.docker.com/) container based on [Debian "jesie"](https://www.debian.org/releases/jessie/).
+
+## Features
+
 
 Let us say the name of the container is *p2*, as this is what we use in the example below ...
+
+
 
 ```
 cd tests
