@@ -4,11 +4,12 @@
 #We like colors
 # Remove comment if you want to use them
 #red=$(tput setaf 1)
-#green=$(tput setaf 2)
-#reset=$(tput sgr0)
+green=$(tput setaf 2)
+reset=$(tput sgr0)
 #yellow=$(tput setaf 3)
 
 docs_prod_build() {
+	echo "${green}==> Building deploymet version of the docs ....${reset}"
 	if [ -d "docs/_build" ]; then
 		rm -rf docs/_build
 	fi

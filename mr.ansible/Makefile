@@ -18,5 +18,5 @@ help: ## This help message
 docs-release-build: ## Building prod version of the docs [docs ready for release]
 	@echo ""
 	@echo "$(GREEN)==> Building prod. version of the docs ....$(RESET)"
-	./src/build_release_docs.sh
+	./bin/build_release_docs.sh
 
