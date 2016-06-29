@@ -18,7 +18,8 @@ Full documentation for end users can be found in the "docs" folder.
 
 ## Dependencies
 
-[Docker](https://docker.com "Homepage of docker")
+- [Docker](https://docker.com "Homepage of docker")
+- [make - GNU make utility to maintain groups of programs](http://linux.about.com/library/cmd/blcmdl1_make.htm)
 
 ## Installation
 
