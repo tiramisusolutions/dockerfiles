@@ -1,6 +1,0 @@
-*.yml
-*.md
-*.rst
-.git
-docs/*
-travisfiles/*
