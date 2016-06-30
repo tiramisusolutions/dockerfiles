@@ -1,0 +1,40 @@
+#!/bin/bash
+set -e
+
+###NOTE###
+# This function uses --add-host="testbox.io:192.168.21.10"
+# remove that for real world usage,
+
+
+#We like colors
+#red=$(tput setaf 1)
+green=$(tput setaf 2)
+reset=$(tput sgr0)
+yellow=$(tput setaf 3)
+
+# Usage: run for example *mr.anible-playbook testbox.yml*
+
+mr.ansible-playbook(){
+    if [[ $@ ]]; then
+		: #Do nothing
+    else
+		clear
+		echo "${red}mr.docs - help${reset}"
+		echo "Usage:${green} mrdocs${reset}${yellow} html linkcheck spellcheck${reset}"
+		echo ""
+		echo "${green}mrdocs html${reset}${yellow} => builds html${reset}"
+		echo "${green}mrdocs linkcheck${reset}${yellow} => runs linkcheck${reset}"
+		echo "${green}mrdocs spellcheck${reset}${yellow} => runs spellcheck${reset}"
+		kill -INT $$;
+   fi
+
+    docker run --rm -it --add-host="testbox.io:192.168.21.10" \
+	-v $SSH_AUTH_SOCK:/tmp/ssh.sck -e SSH_AUTH_SOCK=/tmp/ssh.sck \
+	-v ${PWD}/hosts:/etc/ansible/hosts \
+	-v ${PWD}/ansible.cfg:/etc/ansible/ansible.cfg \
+	-v ${PWD}/roles:/etc/ansible/roles \
+	-v ${PWD}/plays:/etc/ansible/plays \
+	--entrypoint=ansible-playbook an /etc/ansible/plays/$1
+}
+
+mr.ansible-playbook

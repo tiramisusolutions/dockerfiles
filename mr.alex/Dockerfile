@@ -6,4 +6,5 @@ RUN apk --no-cache add nodejs && \
 
 WORKDIR /build
 
-CMD ['alex']
+ENTRYPOINT [ "alex" ]
+#CMD ['alex']

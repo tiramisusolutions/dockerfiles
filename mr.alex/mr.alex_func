@@ -1,0 +1,7 @@
+#!/bin/bash
+
+mr.alex(){
+	docker run -it --rm -v "$(pwd)"/:/build \
+		mr.alex "$@"
+}
+mr.alex "$@"

@@ -1,0 +1,2 @@
+[test]
+testbox.io ansible_user=vagrant

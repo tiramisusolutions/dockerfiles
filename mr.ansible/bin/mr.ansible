@@ -1,0 +1,21 @@
+#!/bin/bash
+set -e
+
+### Note
+# This function uses --add-host="testbox.io:192.168.21.10"
+# remove that for real world usage
+
+#We like colors
+#red=$(tput setaf 1)
+#green=$(tput setaf 2)
+#reset=$(tput sgr0)
+#yellow=$(tput setaf 3)
+
+mr.ansible(){
+    docker run --rm -it --add-host="testbox.io:192.168.21.10" \
+	-v $SSH_AUTH_SOCK:/tmp/ssh.sck -e SSH_AUTH_SOCK=/tmp/ssh.sck \
+	-v ${PWD}/hosts:/etc/ansible/hosts \
+	-v ${PWD}/ansible.cfg:/etc/ansible/ansible.cfg mr.ansible "$@"
+}
+
+mr.ansible

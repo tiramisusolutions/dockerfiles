@@ -1,0 +1,7 @@
+---
+# Play-book for the basic setup
+#
+- hosts: test
+  remote_user: vagrant
+  roles:
+   - base-packages

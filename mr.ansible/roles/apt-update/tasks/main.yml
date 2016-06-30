@@ -1,0 +1,7 @@
+---
+- name: Running apt-get update on server
+  apt: update_cache=yes cache_valid_time=3600
+  become: yes
+  become_method: sudo
+  tags:
+     - packages
