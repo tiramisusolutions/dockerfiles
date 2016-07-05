@@ -1,6 +1,6 @@
 # mr.pandoc
 
-[Pandoc](http://pandoc.org/) in a [Docker](https://www.docker.com/) container based on [Debian "jesie"](https://www.debian.org/releases/jessie/).
+[Pandoc](http://pandoc.org/) in a [Docker](https://www.docker.com/) container based on [Debian "jessie"](https://www.debian.org/releases/jessie/).
 
 ## Features
 
