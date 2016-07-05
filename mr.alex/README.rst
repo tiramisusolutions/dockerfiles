@@ -4,13 +4,13 @@ mr.alex
 `alex <http://alexjs.com/>`_ running in a docker container based on Alpine
 
 
-Whether your own or someone else’s writing, alex helps you find gender favouring, polarising, race related, religion inconsiderate, or other unequal phrasing.
+Whether your own or someone else’s writing, alex helps you find gender favoring, polarizing, race related, religion inconsiderate, or other unequal phrasing.
 
 
 Features
 --------
 
-- checks your docs for gender favouring, polarising, race related, religion inconsiderate, or other unequal phrasing.
+- checks your docs for gender favoring, polarizing, race related, religion inconsiderate, or other unequal phrasing.
 
 Examples
 --------
@@ -42,8 +42,8 @@ Full documentation for end users can be found in the "docs" folder.
 Contribute
 ----------
 
-- `Issue Tracker: <github.com/tiramisusolutions/dockerfiles/mr.alex/issues>`_
-- `Source Code: <github.com/tiramisusolutions/dockerfiles/mr.alex>`_
+- `Issue Tracker <github.com/tiramisusolutions/dockerfiles/mr.alex/issues>`_
+- `Source Code <github.com/tiramisusolutions/dockerfiles/mr.alex>`_
 
 
 Support
@@ -60,7 +60,7 @@ Remember:
 
 since alex are only does rst we need to do:
 
-- save html of file we build with sphinx, converd it to md with pandoc and run alex against it
-- create custom .alexrc with 'allowd words'
+- save html of file we build with sphinx, convert it to md with pandoc and run alex against it
+- create custom .alexrc with 'allowed words' 
 
 
