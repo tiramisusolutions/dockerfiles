@@ -19,7 +19,8 @@ Or like that:
 mr.pandoc -f html -t markdown index.html -o index.md
 
 ##
+ Yeah
 
-Todo:
-
-- create entry point script which, includes the convert part
+```
+docker run -it --rm -v ${PWD}/docs/_build:/source:rw -u $(id -u):$(id -g) mp
+```

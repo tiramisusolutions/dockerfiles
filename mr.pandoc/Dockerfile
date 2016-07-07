@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /source
-#COPY entrypoint.sh /usr/local/bin/
-#ENTRYPOINT [ "/usr/local/bin/entrypoint.sh" ]
-ENTRYPOINT ["pandoc"]
+COPY entrypoint.sh /usr/local/bin/
+ENTRYPOINT [ "/usr/local/bin/entrypoint.sh" ]
+#ENTRYPOINT ["pandoc"]
 #CMD ["--help"]
