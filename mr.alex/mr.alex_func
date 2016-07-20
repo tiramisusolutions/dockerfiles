@@ -1,7 +1,8 @@
 #!/bin/bash
 
 mr.alex(){
-	docker run -it --rm -v "$(pwd)"/:/build \
+	docker run -it --rm -v "$(pwd)"/docs/:/build \
+		-v "$(pwd)"/config/alexignore:/build/.alexignore \
 		mr.alex "$@"
 }
 mr.alex "$@"
