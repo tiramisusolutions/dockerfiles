@@ -46,3 +46,12 @@ Testing
 test.sh
 
 	bash -x test.sh testbox.yml
+
+To-do
+=====
+
+Write on script with two functions
+
+like:
+
+mr.ansible and in there two functions like mr.ansible and mr.ansibe-playbook
