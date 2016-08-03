@@ -1,0 +1,53 @@
+#!/bin/bash
+set -e
+
+# Colors
+ESC_SEQ="\x1b["
+COL_RESET=$ESC_SEQ"39;49;00m"
+COL_RED=$ESC_SEQ"31;01m"
+COL_GREEN=$ESC_SEQ"32;01m"
+COL_YELLOW=$ESC_SEQ"33;01m"
+#COL_BLUE=$ESC_SEQ"34;01m"
+#COL_MAGENTA=$ESC_SEQ"35;01m"
+#COL_CYAN=$ESC_SEQ"36;01m"
+
+
+## Functions we use
+# Error
+
+error_exit() {
+	echo -en "$COL_RED$1$COL_RESET" 1>&2
+	exit 1
+}
+
+mr.write-good(){
+    if [[ $@ ]]; then
+        : #Do nothing
+    else
+       clear
+        echo -en "$COL_RED mr.write-good - help$COL_RESET"
+        kill -INT $$;
+    fi
+	if [ "$1" = "update" ]; then
+		echo "$COL_GREEN Pulling new image $COL_RESET"
+		docker pull quay.io/tiramisu/mr.write-good
+		kill -INT $$;
+	else
+		docker run -it --rm \
+			-v "{$PWD}":/source:rw \
+			-u $(id -u):$(id -g) \
+			quay.io/tiramisu/mr.write-good "$@"
+	fi
+}
+
+_mr.write-good(){
+	local cur prev opts
+        cur="${COMP_WORDS[COMP_CWORD]}"
+        prev="${COMP_WORDS[COMP_CWORD-1]}"
+        opts="mr.write-good update"
+
+        COMPREPLY=( $(compgen -W "${opts}" -- "${cur}") )
+
+}
+complete -F _mr.write-good mr.write-good
+
