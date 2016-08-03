@@ -1,3 +1,5 @@
+# Dockerfile for: https://github.com/btford/write-good
+
 From alpine:latest
 MAINTAINER Sven Strack <sven@so36.net>
 
