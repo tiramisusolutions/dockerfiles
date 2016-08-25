@@ -1,3 +1,8 @@
+#
+# Dockerfile for Caddy https://caddyserver.com/
+# Addopted from https://github.com/abiosoft/caddy-docker
+#
+
 FROM alpine:3.4
 MAINTAINER Sven Strack <sven@so36.net>
 
