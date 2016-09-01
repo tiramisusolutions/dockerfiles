@@ -55,7 +55,7 @@ bears = InvalidLinkBear
 files = docs/**/*.rst
 
 [doc-check]
-bears = reSTLintBear, SpaceConsistencyBear, LineLengthBear, KeywordBear, InvalidLinkBear, ProseLintBear, WriteGoodLintBear
+bears = reSTLintBear, SpaceConsistencyBear, LineLengthBear, KeywordBear, InvalidLinkBear, ProseLintBear, WriteGoodLintBear, AlexBear
 files = docs/**/*.rst
 use_spaces = True
 ci_keywords, cs_keywords = GitHub
@@ -64,3 +64,6 @@ ci_keywords, cs_keywords = GitHub
 bears = WriteGoodLintBear
 files = docs/**/*.rst
 
+[alex]
+bears = AlexBear
+files = docs/**/*.rst
