@@ -6,7 +6,7 @@
 FROM alpine:3.4
 MAINTAINER Sven Strack <sven@so36.net>
 
-LABEL caddy_version="0.9.1" architecture="amd64"
+LABEL caddy_version="0.9.2" architecture="amd64"
 
 RUN builddeps=' \
 	tar \
