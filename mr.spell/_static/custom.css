@@ -1,0 +1,104 @@
+body {
+	/*font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;*/
+	font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: normal;
+	color: #333333;
+}
+a {
+	color: #229922;
+	text-decoration: none;
+	cursor: pointer;
+}
+a:hover {
+    color: #659AC8;
+}
+a:visited {
+	color: #659AC6;
+}
+
+.wy-nav-top i {
+	color: #229922;
+}
+.wy-nav-top a {
+	color: #229922;
+}
+
+.wy-side-nav-search {
+    background-color: #EEEEEE;
+}
+.wy-side-nav-search input[type="text"] {
+    border-color: #EEEEEE;
+}
+.wy-side-nav-search > a, .wy-side-nav-search .wy-dropdown > a {
+    color: #229922;
+}
+.wy-nav-side {
+    background: #F5F4F0;
+}
+.wy-nav-top {
+    background: #EEEEEE;
+}
+.wy-nav-content {
+	max-width: 1000px;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+.rst-content .toggle {
+    background: none repeat scroll 0 0 #e7f2fa;
+    padding: 12px;
+    line-height: 24px;
+    margin-bottom: 24px;
+}
+
+.rst-content .toggle .admonition-title {
+    display: block;
+    clear: both;
+    cursor: pointer;
+}
+
+.rst-content .toggle .admonition-title:after {
+    content: " ▼";
+}
+
+.rst-content .toggle .admonition-title.open:after {
+    content: " ▲";
+}
+
+.rst-content .toggle p:last-child {
+    margin-bottom: 0;
+}
+@media screen and (max-width: 1200px){
+.wy-nav-content {
+    max-width: 1100px !important;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+.wy-body-for-nav{
+    background: #fcfcfc
+}
+.wy-nav-top{
+display: block
+}
+.wy-nav-side{
+left: -300px
+}
+.wy-nav-side.shift{
+width: 85%;
+left: 0
+}
+.wy-nav-content-wrap{
+margin-left: 0
+}
+.wy-nav-content-wrap .wy-nav-content{
+padding: 1.618em
+}
+.wy-nav-content-wrap.shift{
+position: fixed;
+min-width: 100%;
+left: 85%;
+top: 0;
+height: 100%;
+overflow: hidden
+}
+
+}

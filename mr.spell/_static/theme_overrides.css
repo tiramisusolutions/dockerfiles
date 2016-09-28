@@ -1,0 +1,43 @@
+body {
+	/*font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;*/
+	font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: normal;
+	color: #333333;
+}
+a {
+	color: #229922;
+	text-decoration: none;
+	cursor: pointer;
+}
+a:hover {
+    color: #659AC8;
+}
+a:visited {
+	color: #659AC6;
+}
+
+.wy-nav-top i {
+	color: #229922;
+}
+.wy-nav-top a {
+	color: #229922;
+}
+
+.wy-side-nav-search {
+    background-color: #EEEEEE;
+}
+.wy-side-nav-search input[type="text"] {
+    border-color: #EEEEEE;
+}
+.wy-side-nav-search > a, .wy-side-nav-search .wy-dropdown > a {
+    color: #229922;
+}
+.wy-nav-side {
+    background: #F5F4F0;
+}
+.wy-nav-top {
+    background: #EEEEEE;
+}
+.wy-nav-content {
+	max-width: 1025px;
+}
