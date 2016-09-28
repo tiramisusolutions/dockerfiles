@@ -18,11 +18,14 @@ RUN builddeps=' \
 	py-httplib2 \
 	bash \
 	make \
+	aspell-en \
+	enchant \
 	$builddeps \
 	&& pip install --upgrade pip \
 	&& pip install \
 		sphinx \
 		sphinx-rtd-theme \
+		sphinxcontrib-spelling \
 	&& apk del --purge $builddeps \
 	&& rm -rf $PIP_CACHE
 
