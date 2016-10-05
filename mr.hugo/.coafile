@@ -1,0 +1,16 @@
+[MAKEFILE]
+bears = LineLengthBear
+files = Makefile
+max_line_length = 150
+
+[DOCS]
+bears = SpaceConsistencyBear, LineLengthBear, InvalidLinkBear, SpellCheckBear
+use_spaces = True
+files = docs/**/*.rst
+ignore_length_regex = ^.*https?://
+max_line_length = 250
+
+[WG]
+bears = WriteGoodLintBear
+files = docs/**/*.rst
+
