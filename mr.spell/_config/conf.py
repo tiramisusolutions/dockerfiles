@@ -39,7 +39,7 @@ extensions = [
 
 
 # This is our wordlist with know words, like Github or Plone ...
-spelling_word_list_filename = '../_static/spelling_wordlist.txt'
+spelling_word_list_filename = 'spelling_wordlist.txt'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['../_templates']

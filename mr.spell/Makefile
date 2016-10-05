@@ -182,13 +182,6 @@ texinfo:
 	@echo "Run \`make' in that directory to run these through makeinfo" \
 	      "(use \`make info' here to do that automatically)."
 
-NY: spellcheck
-spellcheck:
-	LANGUAGE=$* $(SPHINXBUILD) -b spelling -j 4 $(ALLSPHINXOPTS) $(BUILDDIR)/buildlog/spellcheck/$*
-	@echo
-	@echo "Testing of doctests in the sources finished, look at the " \
-	    "results in $(BUILDDIR)/doctest/output.txt."
-
 .PHONY: info
 info:
 	$(SPHINXBUILD) -b texinfo $(ALLSPHINXOPTS) $(BUILDDIR)/texinfo

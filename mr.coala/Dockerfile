@@ -9,18 +9,19 @@ RUN builddeps=' \
     python3-dev \
     ' \
     apk add --no-cache musl \
-        openssl \
+        $builddeps \
+		openssl \
         git \
         bash \
         ca-certificates \
         python3 \
         clang \
-        clang-libs \
         indent \
         nodejs \
-        openjdk8-jre \
+	&& python3 -m ensurepip \
+	&& rm -r /usr/lib/python*/ensurepip \
 	&& pip3 install --upgrade pip \
-	&& pip3 install coala-bears \
+	&& pip3 install coala-bears --pre \
 	&& rm -rf $PIP_CACHE \
     && npm install  -g \
         alex \
@@ -39,7 +40,5 @@ RUN builddeps=' \
         ramllint \
 	&& apk del --purge $builddeps
 
-ENV VERSION 3.4
-ADD https://www.languagetool.org/download/LanguageTool-$VERSION.zip /LanguageTool-$VERSION.zip
 
 ENTRYPOINT ["coala"]

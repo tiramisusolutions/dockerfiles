@@ -32,6 +32,8 @@ RUN builddeps=' \
 #VOLUME ["/build/docs"]
 
 COPY _config /build/_config
+COPY spelling_wordlist.txt /build/_config/spelling_wordlist.txt
+COPY spelling_wordlist.txt /build/spelling_wordlist.txt
 COPY _static /build/_static
 COPY Makefile /build/Makefile
 
