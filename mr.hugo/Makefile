@@ -19,7 +19,7 @@ help: ## This help message
 
 .PHONY: server
 server: ## Serves local, open yur browser on localhost on port 1313
-	$(HUGO) server -w --baseUrl="http://localhost:1313" --bind=0.0.0.0
+	$(HUGO) server -w --baseUrl="http://localhost:1313" --bind=0.0.0.0 --buildDrafts
 
 .PHONY: clean
 clean: ##Removes /public
