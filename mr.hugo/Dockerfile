@@ -9,10 +9,10 @@ RUN apk --no-cache add \
 	wget \
 	tar
 
-RUN wget https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_linux-64bit.tgz \
-	&& tar zxf hugo_${HUGO_VERSION}_linux-64bit.tgz \
-	&& mv hugo /usr/local/bin \
-	&& rm hugo_${HUGO_VERSION}_linux-64bit.tgz
+RUN wget https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz \
+	&& tar zxf hugo_${HUGO_VERSION}_Linux-64bit.tar.gz \
+	&& mv hugo_${HUGO_VERSION}_linux_amd64 /usr/local/bin/hugo \
+	&& rm hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
 
 
 VOLUME /src
