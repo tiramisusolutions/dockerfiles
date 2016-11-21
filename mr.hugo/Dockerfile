@@ -1,7 +1,7 @@
 FROM alpine:latest
 MAINTAINER Sven Strack <sven@testthedocs.org>
 
-ENV HUGO_VERSION 0.16
+ENV HUGO_VERSION 0.17
 ENV PIP_CACHE /root/.cache
 
 RUN apk --no-cache add \
