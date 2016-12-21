@@ -1,7 +1,7 @@
 FROM alpine:latest
 MAINTAINER Sven Strack <sven@testthedocs.org>
 
-ENV HUGO_VERSION 0.17
+ENV HUGO_VERSION 0.18
 ENV PIP_CACHE /root/.cache
 
 LABEL hugo_version=$HUGO_VERSION
