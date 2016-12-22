@@ -1,0 +1,1 @@
+find . -name "*.rst" -type f -exec write-good --so {} +
