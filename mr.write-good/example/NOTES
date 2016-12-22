@@ -1,1 +1,4 @@
 find . -name "*.rst" -type f -exec write-good --so {} +
+
+with dockerm where the container is called 'mr.wg'
+find . -name "*.rst" -type f -exec docker run -it --rm -v "${PWD}":/source:rw -u $(id -u):$(id -g) mr.wg --so {} +
