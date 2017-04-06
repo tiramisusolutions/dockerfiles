@@ -3,8 +3,8 @@
 # Addopted from https://github.com/abiosoft/caddy-docker
 #
 
-FROM alpine:3.4
-MAINTAINER Sven Strack <sven@so36.net>
+FROM alpine:3.5
+LABEL maintainer "Sven <sven@testthedocs.org>"
 
 LABEL caddy_version="0.9.5" architecture="amd64"
 
