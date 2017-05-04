@@ -1,7 +1,9 @@
 FROM alpine:latest
-MAINTAINER Sven Strack <sven@testthedocs.org>
+LABEL maintainer "Sven <sven@tiramisu.solutions" \
+	    org.label-schema.vendor = "TiramisuSolutions"
 
-ENV HUGO_VERSION 0.18
+
+ENV HUGO_VERSION 0.20.7
 ENV PIP_CACHE /root/.cache
 
 LABEL hugo_version=$HUGO_VERSION
